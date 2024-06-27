@@ -1,11 +1,11 @@
 public class MotoBike extends Vehicle{
-    public String Xemay;
 
-    public MotoBike(double Dungtich, String Kieudang, String Mausac, String Xemay) {
-
-        super(Dungtich, Kieudang, Mausac);
-        this.Xemay=Xemay;
+    public MotoBike(double Dungtich, String Kieudang, String Mausac, double maxSpeed, double gasConsumption) {
+        super(Dungtich, Kieudang, Mausac, maxSpeed, gasConsumption);
     }
+
+
+
     @Override
     public void Tiengkeu(){
         System.out.println("Keng Keng");
@@ -14,6 +14,5 @@ public class MotoBike extends Vehicle{
     @Override
     public void HienThi() {
         super.HienThi();
-        System.out.println(this.Xemay);
     }
 }

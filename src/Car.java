@@ -1,11 +1,9 @@
-public class Car extends Vehicle {
-    public int Chongoi;
-    public Car(double Dungtich, String Kieudang, String Mausac,int Chongoi) {
+public class Car extends Vehicle implements ActionVehicle{
 
-        super(Dungtich, Kieudang, Mausac);
-        this.Chongoi= Chongoi;
+
+    public Car(double Dungtich, String Kieudang, String Mausac, double maxSpeed, double gasConsumption) {
+        super(Dungtich, Kieudang, Mausac, maxSpeed, gasConsumption);
     }
-
 
     @Override
     public void Tiengkeu(){
@@ -15,6 +13,16 @@ public class Car extends Vehicle {
     @Override
     public void HienThi() {
         super.HienThi();
-        System.out.println(this.Chongoi);
+
+    }
+
+    @Override
+    public double getMaxSpeed1() {
+        return getMaxSpeed();
+    }
+
+    @Override
+    public double getGasConsumption1() {
+        return getGasConsumption();
     }
 }
